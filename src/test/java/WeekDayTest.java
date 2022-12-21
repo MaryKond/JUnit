@@ -24,6 +24,18 @@ public class WeekDayTest {
 
 
     }
+
+
+    @Test
+    public void negativeTest1(){
+        var dayNumber1 = new WeekDays();
+//        assertThrows(IllegalArgumentException.class,()->{dayNumber.getDay(0);});
+//        assertThrows(IllegalArgumentException.class,()->{dayNumber.getDay(10);});
+        assertEquals(dayNumber1.getDay(0),"The number should be equal or larger than 1");
+        assertEquals(dayNumber1.getDay(10),"The number should be equal or smaller than 7");
+
+
+    }
     @Test
     @DisplayName("NullPointer Exception test")
     public void errorTst(){
